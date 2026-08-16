@@ -6,37 +6,37 @@ class CircularLinks {
         
         // Defines the links in the inner ring
         this.innerLinks = [
-            { id: 'ddg012', url: 'https://duckduckgo.com/&search', image: 'assets/images/img-porto_norte-v4.png' },
-            { id: 'ddg013', url: 'https://duckduckgo.com/&search', image: 'assets/images/img-oriente-v4.png' },
-            { id: 'ddg014', url: 'https://duckduckgo.com/&search', image: 'assets/images/img-oeiras-v4.png' },
-            { id: 'ddg015', url: 'https://duckduckgo.com/&search', image: 'assets/images/img-evora-v4.png' },
-            { id: 'ddg016', url: 'https://duckduckgo.com/&search', image: 'assets/images/img-porto_centro-v4.png' },
+            { id: 'ddg012', url: 'https://github.com/hipolitorodrigues/CIRANDA', image: 'assets/images/img-porto_norte-v4.png' },
+            { id: 'ddg013', url: 'https://github.com/hipolitorodrigues/CIRANDA', image: 'assets/images/img-oriente-v4.png' },
+            { id: 'ddg014', url: 'https://github.com/hipolitorodrigues/CIRANDA', image: 'assets/images/img-oeiras-v4.png' },
+            { id: 'ddg015', url: 'https://github.com/hipolitorodrigues/CIRANDA', image: 'assets/images/img-evora-v4.png' },
+            { id: 'ddg016', url: 'https://github.com/hipolitorodrigues/CIRANDA', image: 'assets/images/img-porto_centro-v4.png' },
 
-            { id: 'ddg017', url: 'https://duckduckgo.com/&search', image: 'assets/images/img-porto_norte-v2.png' },
-            { id: 'ddg018', url: 'https://duckduckgo.com/&search', image: 'assets/images/img-porto_centro-v2.png' },
-            { id: 'ddg019', url: 'https://duckduckgo.com/&search', image: 'assets/images/img-evora-v2.png' },
-            { id: 'ddg020', url: 'https://duckduckgo.com/&search', image: 'assets/images/img-oeiras-v2.png' },
-            { id: 'ddg021', url: 'https://duckduckgo.com/&search', image: 'assets/images/img-oriente-v2.png' }
+            { id: 'ddg017', url: 'https://github.com/hipolitorodrigues/CIRANDA', image: 'assets/images/img-porto_norte-v2.png' },
+            { id: 'ddg018', url: 'https://github.com/hipolitorodrigues/CIRANDA', image: 'assets/images/img-porto_centro-v2.png' },
+            { id: 'ddg019', url: 'https://github.com/hipolitorodrigues/CIRANDA', image: 'assets/images/img-evora-v2.png' },
+            { id: 'ddg020', url: 'https://github.com/hipolitorodrigues/CIRANDA', image: 'assets/images/img-oeiras-v2.png' },
+            { id: 'ddg021', url: 'https://github.com/hipolitorodrigues/CIRANDA', image: 'assets/images/img-oriente-v2.png' }
         ];
 
         // Defines the links in the outer ring
         this.outerLinks = [
-            { id: 'ddg01', url: 'https://duckduckgo.com/&search', image: 'assets/images/img-axporto_norte-v2.png' },
-            { id: 'ddg02', url: 'https://duckduckgo.com/&search', image: 'assets/images/img-axoriente-v2.png' },
-            { id: 'ddg03', url: 'https://duckduckgo.com/&search', image: 'assets/images/img-axoeiras-v2.png' },
-            { id: 'ddg04', url: 'https://duckduckgo.com/&search', image: 'assets/images/img-expedia-v2.png' },
-            { id: 'ddg05', url: 'https://duckduckgo.com/&search', image: 'assets/images/img-mirai-v2.png' },
-            { id: 'ddg06', url: 'https://duckduckgo.com/&search', image: 'assets/images/img-dedge-v2.png' },
+            { id: 'ddg01', url: 'https://github.com/hipolitorodrigues/CIRANDA', image: 'assets/images/img-axporto_norte-v2.png' },
+            { id: 'ddg02', url: 'https://github.com/hipolitorodrigues/CIRANDA', image: 'assets/images/img-axoriente-v2.png' },
+            { id: 'ddg03', url: 'https://github.com/hipolitorodrigues/CIRANDA', image: 'assets/images/img-axoeiras-v2.png' },
+            { id: 'ddg04', url: 'https://github.com/hipolitorodrigues/CIRANDA', image: 'assets/images/img-expedia-v2.png' },
+            { id: 'ddg05', url: 'https://github.com/hipolitorodrigues/CIRANDA', image: 'assets/images/img-mirai-v2.png' },
+            { id: 'ddg06', url: 'https://github.com/hipolitorodrigues/CIRANDA', image: 'assets/images/img-dedge-v2.png' },
 
             { id: 'clean', image: 'assets/images/clean.png' },
             { id: 'clean', image: 'assets/images/clean.png' },
             { id: 'clean', image: 'assets/images/clean.png' },
 
-            { id: 'ddg07', url: 'https://duckduckgo.com/&search', image: 'assets/images/img-planet-v2.png' },
-            { id: 'ddg08', url: 'https://duckduckgo.com/&search', image: 'assets/images/img-hrs-v2.png' },
-            { id: 'ddg09', url: 'https://duckduckgo.com/&search', image: 'assets/images/img-booking-v2.png' },
-            { id: 'ddg10', url: 'https://duckduckgo.com/&search', image: 'assets/images/img-axporto_centro-v2.png' },
-            { id: 'ddg11', url: 'https://duckduckgo.com/&search', image: 'assets/images/img-axevora-v2.png' }
+            { id: 'ddg07', url: 'https://github.com/hipolitorodrigues/CIRANDA', image: 'assets/images/img-planet-v2.png' },
+            { id: 'ddg08', url: 'https://github.com/hipolitorodrigues/CIRANDA', image: 'assets/images/img-hrs-v2.png' },
+            { id: 'ddg09', url: 'https://github.com/hipolitorodrigues/CIRANDA', image: 'assets/images/img-booking-v2.png' },
+            { id: 'ddg10', url: 'https://github.com/hipolitorodrigues/CIRANDA', image: 'assets/images/img-axporto_centro-v2.png' },
+            { id: 'ddg11', url: 'https://github.com/hipolitorodrigues/CIRANDA', image: 'assets/images/img-axevora-v2.png' }
         ];
         
         // Initialize
@@ -94,22 +94,9 @@ class CircularLinks {
 
     // Updates the ring layout
     updateLayout() {
-        const margin = 2;
-        const hoverSpace = 40;
-        
-        // Calculates the container size
-        const containerRect = this.container.getBoundingClientRect();
-        const containerSize = Math.min(
-            containerRect.width - (margin * 0 + hoverSpace * 0),
-            containerRect.height - (margin * 0 + hoverSpace * 0)
-        );
-        // Other values ​​for tests/debug:
-        /* 
-        const containerSize = Math.min(
-            window.innerWidth - (margin * 2 + hoverSpace * 2),
-            window.innerHeight - (margin * 2 + hoverSpace * 2)
-        );
-        */
+        // Calculates available size based on the parent container dimensions
+        const parentRect = this.container.parentElement.getBoundingClientRect();
+        const containerSize = Math.min(parentRect.width, parentRect.height);
 
         // Sets the ring radii
         const outerRadius = (containerSize / 2) * 0.9;  // 90% of container radius for the outer ring
