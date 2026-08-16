@@ -1,10 +1,10 @@
-/* Classe responsável por criar e gerenciar o círculo de links */
+/* Class responsible for creating and managing the link ring. */
 class CircularLinks {
     constructor() {
-        // Obtém referência ao container do círculo
+        // Gets a reference to the link ring container
         this.container = document.getElementById('circleContainer');
         
-        // Define os links do círculo interno
+        // Defines the links in the inner ring
         this.innerLinks = [
             { id: 'ddg012', url: 'https://duckduckgo.com/&search', image: 'assets/images/img-porto_norte-v4.png' },
             { id: 'ddg013', url: 'https://duckduckgo.com/&search', image: 'assets/images/img-oriente-v4.png' },
@@ -19,6 +19,7 @@ class CircularLinks {
             { id: 'ddg021', url: 'https://duckduckgo.com/&search', image: 'assets/images/img-oriente-v2.png' }
         ];
 
+        // Defines the links in the outer ring
         this.outerLinks = [
             { id: 'ddg01', url: 'https://duckduckgo.com/&search', image: 'assets/images/img-axporto_norte-v2.png' },
             { id: 'ddg02', url: 'https://duckduckgo.com/&search', image: 'assets/images/img-axoriente-v2.png' },
@@ -38,32 +39,32 @@ class CircularLinks {
             { id: 'ddg11', url: 'https://duckduckgo.com/&search', image: 'assets/images/img-axevora-v2.png' }
         ];
         
-        // Inicializa o círculo
+        // Initialize
         this.init();
         
-        // Adiciona listener para redimensionamento da janela
+        // Adds a window resize event listener
         window.addEventListener('resize', () => this.updateLayout());
     }
 
-    // Cria um elemento de link individual
+    // Creates an individual link element
     createLinkElement(link, index, isOuter) {
-        // Cria elemento <a>
+        // Creates an <a> element
         const linkElement = document.createElement('a');
         linkElement.className = 'link-item';
         linkElement.dataset.id = link.id;
         linkElement.dataset.isOuter = isOuter;
         linkElement.dataset.index = index;
     
-        // Se o link não tiver URL, marque-o como desativado
+        // Disable the link if no URL is provided
         if (!link.url) {
             linkElement.classList.add('disabled');
-            linkElement.style.cursor = 'default'; // Força o cursor padrão
+            linkElement.style.cursor = 'default'; // Forces the default cursor
         } else {
             linkElement.href = link.url;
             linkElement.target = '_blank';
         }
     
-        // Cria elemento <img>
+        // Creates an <img> element
         const img = document.createElement('img');
         img.src = link.image;
         img.alt = link.id;
@@ -72,51 +73,53 @@ class CircularLinks {
         return linkElement;
     }
 
-    // Inicializa o círculo
+    // Initializes the ring elements and layout
     init() {
         this.createLinks();
         this.updateLayout();
     }
 
-    // Cria todos os links no círculo
+    // Builds all links in the ring
     createLinks() {
-        // Adiciona links externos
+        // Adds external links
         this.outerLinks.forEach((link, index) => {
             this.container.appendChild(this.createLinkElement(link, index, true));
         });
 
-        // Adiciona links internos
+        // Add internal links
         this.innerLinks.forEach((link, index) => {
             this.container.appendChild(this.createLinkElement(link, index, false));
         });
     }
 
-    // Atualiza o layout do círculo
+    // Updates the ring layout
     updateLayout() {
         const margin = 2;
         const hoverSpace = 40;
         
-        // Calcula o tamanho do container
+        // Calculates the container size
         const containerRect = this.container.getBoundingClientRect();
         const containerSize = Math.min(
             containerRect.width - (margin * 0 + hoverSpace * 0),
             containerRect.height - (margin * 0 + hoverSpace * 0)
         );
-        // ou - Calcula o tamanho do container
-        /* const containerSize = Math.min(
+        // Other values ​​for tests/debug:
+        /* 
+        const containerSize = Math.min(
             window.innerWidth - (margin * 2 + hoverSpace * 2),
             window.innerHeight - (margin * 2 + hoverSpace * 2)
-        ); */
-        
-        // Define os raios dos círculos
-        const outerRadius = (containerSize / 2) * 0.9;
-        const innerRadius = outerRadius * 0.6;
+        );
+        */
 
-        // Ajusta dimensões do container
+        // Sets the ring radii
+        const outerRadius = (containerSize / 2) * 0.9;  // 90% of container radius for the outer ring
+        const innerRadius = outerRadius * 0.6;  // 60% of outer radius for the concentric inner ring
+
+        // Adjusts the container dimensions
         this.container.style.width = `${containerSize}px`;
         this.container.style.height = `${containerSize}px`;
 
-        // Calcula tamanho dos itens
+        // Calculates the item size
         const outerItemSize = Math.min(
             (2 * Math.PI * outerRadius) / this.outerLinks.length * 0.5,
             70
@@ -126,7 +129,7 @@ class CircularLinks {
             70
         );
 
-        // Posiciona cada item no círculo
+        // Positions each item around the ring
         const links = this.container.getElementsByClassName('link-item');
         Array.from(links).forEach(link => {
             const isOuter = link.dataset.isOuter === 'true';
@@ -135,12 +138,12 @@ class CircularLinks {
             const radius = isOuter ? outerRadius : innerRadius;
             const itemSize = isOuter ? outerItemSize : innerItemSize;
 
-            // Calcula posição usando trigonometria
-            const angle = (index * 2 * Math.PI) / total - Math.PI / 2;
-            const left = radius * Math.cos(angle) + containerSize / 2 - itemSize / 2;
-            const top = radius * Math.sin(angle) + containerSize / 2 - itemSize / 2;
+            // Calculates the position using trigonometry
+            const angle = (index * 2 * Math.PI) / total - Math.PI / 2;  // Offsets by -90deg (-PI/2) so item 0 starts at 12 o'clock
+            const left = radius * Math.cos(angle) + containerSize / 2 - itemSize / 2;  // X-coord centered on the ring point
+            const top = radius * Math.sin(angle) + containerSize / 2 - itemSize / 2;  // Y-coord centered on the ring point
 
-            // Aplica posição calculada
+            // Applies the calculated position
             link.style.left = `${left}px`;
             link.style.top = `${top}px`;
             link.style.width = `${itemSize}px`;
@@ -149,7 +152,7 @@ class CircularLinks {
     }
 }
 
-// Inicializa a classe quando o DOM estiver carregado
+// Initializes the class when the DOM is fully loaded
 document.addEventListener('DOMContentLoaded', () => {
     new CircularLinks();
 });
