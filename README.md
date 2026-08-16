@@ -73,10 +73,8 @@ To add or modify icons and links:
 
 ## Developer
 
-- **Developer**: Hipolito Rodrigues
+- **Developer**: @hipolitorodrigues
 - **Creation Date**: 2024-11-11
-- **Last Update**: 2025-05-19
-- **Current Version**: 1.3
 
 ---
 
