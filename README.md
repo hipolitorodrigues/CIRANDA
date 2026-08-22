@@ -6,7 +6,7 @@
 
 Ciranda is a simple and interactive web application designed to facilitate access to web systems.
 
-![alt text](https://github.com/hipolitorodrigues/ciranda/blob/c16b93e44bd824909f040dfa42e7f9f37762b116/assets/images/sampling.png)
+![](assets\images\sampling_01.png)
 
 ## Description
 
@@ -60,6 +60,7 @@ ciranda/
 
 Make sure you have an updated browser to ensure compatibility with the modern features used in the application.
 
+
 ## Customization
 
 To add or modify icons and links:
@@ -70,6 +71,12 @@ To add or modify icons and links:
    ```javascript
    { id: 'icon-name', url: 'https://link.com', image: 'path/to/image.png' }
    ```
+
+**Exemples**:
+
+![](assets\images\sampling_02.png)  
+
+![](assets\images\sampling_03.png) 
 
 ## Developer
 
