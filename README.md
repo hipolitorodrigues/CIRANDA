@@ -6,7 +6,7 @@
 
 Ciranda is a simple and interactive web application designed to facilitate access to web systems.
 
-![](assets\images\sampling_01.png)
+![](assets\images\sampling_a.png)
 
 ## Description
 
@@ -74,9 +74,9 @@ To add or modify icons and links:
 
 **Exemples**:
 
-![](assets\images\sampling_02.png)  
+![](assets\images\sampling_b.png)  
 
-![](assets\images\sampling_03.png) 
+![](assets\images\sampling_c.png) 
 
 ## Developer
 
